@@ -188,6 +188,27 @@
     .ticket-divider{display:none;}
   }
 
+  /* ---------- TEAM COLOURS ---------- */
+  .teams{background:var(--grey-100);}
+  .team-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .team-card{
+    border-radius:var(--radius-lg); padding:28px 24px; color:#fff;
+    box-shadow:0 16px 36px -18px rgba(10,18,46,0.35);
+  }
+  .team-card.team-blue{background:linear-gradient(155deg,#489dda,#252366 120%);}
+  .team-card.team-white{background:linear-gradient(155deg,#e9edf2,#c3cad3 120%); color:var(--dark-blue);}
+  .team-card.team-green{background:linear-gradient(155deg,#3fae70,#0a122e 130%);}
+  .team-swatch{font-size:26px; margin-bottom:10px;}
+  .team-card h3{font-size:19px; margin-bottom:14px;}
+  .team-card ul{list-style:none; margin:0; padding:0;}
+  .team-card li{
+    font-size:14.5px; font-weight:600; padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,0.22);
+  }
+  .team-card.team-white li{border-bottom-color:rgba(10,18,46,0.14);}
+  .team-card li:last-child{border-bottom:none;}
+  @media (max-width:700px){.team-grid{grid-template-columns:1fr;}}
+
   /* ---------- MISSION DAYS ---------- */
   .journey{background:var(--white);}
   .day-card{
@@ -374,11 +395,15 @@
       <div class="ticket-main">
         <div class="ticket-row">
           <div class="icon">🚗</div>
-          <div><div class="label">Arrival</div><div class="value">Thu, 10 Sep — between 15:00 &amp; 15:30</div></div>
+          <div><div class="label">Arrival</div><div class="value">Thu, 10 Sep — 15:00–15:15 latest</div></div>
+        </div>
+        <div class="ticket-row">
+          <div class="icon">🏁</div>
+          <div><div class="label">Getting there</div><div class="value">Own vehicle / lift club — aim to leave Century City by 13:00 (±2 hr drive)</div></div>
         </div>
         <div class="ticket-row">
           <div class="icon">🚗</div>
-          <div><div class="label">Departure</div><div class="value">Sat, 12 Sep — between 10:00 &amp; 11:00, after breakfast</div></div>
+          <div><div class="label">Departure</div><div class="value">Sat, 12 Sep — approx. 10:00, after breakfast</div></div>
         </div>
         <div class="ticket-row">
           <div class="icon">📍</div>
@@ -396,6 +421,55 @@
           <div class="stub-team">Specnites</div>
         </div>
         <div class="stub-code">SPECNO · KAROO1 · SEP26</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM COLOURS -->
+<section class="teams">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div class="eyebrow">Pick a side</div>
+      <h2>Your team for the weekend</h2>
+      <p>Three teams. Three colours. One Potjie champion. Wear your colour Thursday.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card team-blue">
+        <div class="team-swatch">🔵</div>
+        <h3>Team Blue</h3>
+        <ul>
+          <li>Sibo</li>
+          <li>Marlon</li>
+          <li>Mo</li>
+          <li>Ruzaigh</li>
+          <li>Wico</li>
+          <li>Ross</li>
+        </ul>
+      </div>
+      <div class="team-card team-white">
+        <div class="team-swatch">⚪</div>
+        <h3>Team White</h3>
+        <ul>
+          <li>Golan</li>
+          <li>Herman</li>
+          <li>Weiss</li>
+          <li>Taeya</li>
+          <li>Henry</li>
+          <li>Monique</li>
+        </ul>
+      </div>
+      <div class="team-card team-green">
+        <div class="team-swatch">🟢</div>
+        <h3>Team Green</h3>
+        <ul>
+          <li>Harvey</li>
+          <li>Ester</li>
+          <li>Miles</li>
+          <li>Sardonnay</li>
+          <li>Jose</li>
+          <li>Francois</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -421,9 +495,11 @@
       </div>
       <div class="day-body">
         <div class="timeline">
-          <div class="t-item"><div class="t-time">15:00</div><div><div class="t-what">Arrive at Reception</div><div class="t-desc">We kindly request your presence between 15:00–15:30.</div></div></div>
-          <div class="t-item"><div class="t-time">4:00 – 5:00pm</div><div><div class="t-what">🏍 Quad Adventure</div><div class="t-desc">Explore Karoo1 on quad bikes. Enjoy the scenery, get comfortable, and take in the views before the evening begins.</div></div></div>
-          <div class="t-item"><div class="t-time">18:00</div><div><div class="t-what">🍲 The Potjie Challenge</div><div class="t-desc">We'll split into teams and compete to see who can create the ultimate potjie. Four teams. Four pots. One champion. May the best team win.</div><div class="t-where">The Boma</div></div></div>
+          <div class="t-item"><div class="t-time">13:00</div><div><div class="t-what">🚗 Depart Century City</div><div class="t-desc">Own vehicles / lift clubs — arrange a carpool with your team. The drive is approximately 2 hours.</div></div></div>
+          <div class="t-item"><div class="t-time">15:00 – 15:15</div><div><div class="t-what">Arrive at Karoo1</div><div class="t-desc">Please arrive by 15:15 latest — the programme starts shortly after.</div></div></div>
+          <div class="t-item"><div class="t-time">15:15 – 15:30</div><div><div class="t-what">Check in</div><div class="t-desc">Drop your luggage and get ready for the first activity. Your Mission Kit will be waiting. 👀</div></div></div>
+          <div class="t-item"><div class="t-time">15:45 – 16:00</div><div><div class="t-what">🏍 Quad Bike Adventure</div><div class="t-desc">Meet at Reception. 18 participants will head out for the quad-bike experience with WildX Adventures. Exact timing may still be confirmed.</div></div></div>
+          <div class="t-item"><div class="t-time">17:15</div><div><div class="t-what">🔥 The Great Specno Potjie Challenge</div><div class="t-desc">Three teams. Three chicken potjies. One winning pot. 🔵 Blue · ⚪ White · 🟢 Green. Bring your team colour, your secret recipe and your competitive side. May the best pot win. 🏆</div><div class="t-where">The Boma</div></div></div>
         </div>
       </div>
     </div>
@@ -442,11 +518,13 @@
         <div class="timeline">
           <div class="t-item"><div class="t-time">08:00</div><div><div class="t-what">🍳 Breakfast</div><div class="t-desc">Start the day with a hearty breakfast before the day's activities begin.</div><div class="t-where">Venue Restaurant</div></div></div>
           <div class="t-item"><div class="t-time">08:50</div><div><div class="t-what">📸 Team Photo</div><div class="t-desc">Our official Specno Company Getaway 2026 team photo. Smile — this one might end up on the office wall.</div></div></div>
-          <div class="t-item"><div class="t-time">09:00 – 12:00pm</div><div><div class="t-what">💡 Company Session / Teambuilding</div><div class="t-desc">A chance to step away from day-to-day work, reflect on where we're heading, and hear what's next for Specno.</div><div class="t-where">Conference Room</div></div></div>
-          <div class="t-item"><div class="t-time">12:30</div><div><div class="t-what">Drive to Aquila Private Game Reserve</div></div></div>
-          <div class="t-item"><div class="t-time">13:00</div><div><div class="t-what">🍽️ Buffet Lunch</div><div class="t-desc">Enjoy a delicious buffet lunch before we head out on safari.</div><div class="t-where">Aquila Game Reserve</div></div></div>
-          <div class="t-item"><div class="t-time">15:00</div><div><div class="t-what">🦁 Safari Game Drive</div><div class="t-desc">Climb aboard and experience Aquila's Big Five Game Reserve. Keep your eyes peeled — you never know what you'll spot.</div></div></div>
-          <div class="t-item"><div class="t-time">16:30</div><div><div class="t-what">🌅 Free Time</div><div class="t-desc">The afternoon is yours. Take a walk, relax by the pool, grab a drink, or unwind and enjoy Karoo1.</div></div></div>
+          <div class="t-item"><div class="t-time">09:00 – 10:30</div><div><div class="t-what">💡 Specno Company Session</div><div class="t-desc">A chance to step away from day-to-day work, reflect on where we're heading, and hear what's next for Specno.</div><div class="t-where">Conference Room</div></div></div>
+          <div class="t-item"><div class="t-time">10:30</div><div><div class="t-what">☕ Quick Recharge</div><div class="t-desc">Grab a snack, refill your water and get ready for the next challenge.</div></div></div>
+          <div class="t-item"><div class="t-time">10:45 – 12:00</div><div><div class="t-what">🤝 The Team Challenge</div><div class="t-desc">Communication. Strategy. Teamwork. And probably a little chaos. The rest you'll find out on the day. 👀</div></div></div>
+          <div class="t-item"><div class="t-time">13:00</div><div><div class="t-what">🐘 Depart for Aquila</div><div class="t-desc">A short drive to Aquila Private Game Reserve, about 15 minutes away.</div></div></div>
+          <div class="t-item"><div class="t-time">13:15</div><div><div class="t-what">🍽️ Check In &amp; Buffet Lunch</div><div class="t-desc">Check in and enjoy a buffet lunch before the afternoon safari.</div><div class="t-where">Aquila Game Reserve</div></div></div>
+          <div class="t-item"><div class="t-time">16:00 – 18:00</div><div><div class="t-what">🦁 Safari Game Drive</div><div class="t-desc">Two hours exploring Aquila and hopefully spotting some of the Big Five.</div></div></div>
+          <div class="t-item"><div class="t-time">18:15 – 18:30</div><div><div class="t-what">Return to Karoo1</div></div></div>
           <div class="t-item"><div class="t-time">19:00</div><div><div class="t-what">🍕 Dinner</div><div class="t-desc">Join the team for dinner and another chance to relax, connect, and share stories from the day.</div><div class="t-where">Venue Restaurant</div></div></div>
           <div class="t-item"><div class="t-time">21:00</div><div><div class="t-what">🎉 Team Jol</div><div class="t-desc">Good music, good company, and a chance to celebrate an incredible day together.</div><div class="t-where">AfriCamps Units</div></div></div>
         </div>
@@ -466,7 +544,7 @@
       <div class="day-body">
         <div class="timeline">
           <div class="t-item"><div class="t-time">08:00</div><div><div class="t-what">🥓 Breakfast</div><div class="t-desc">Served from 08:00 to 10:00.</div></div></div>
-          <div class="t-item"><div class="t-time">10–11:00</div><div><div class="t-what">🏡 Departure, after breakfast</div></div></div>
+          <div class="t-item"><div class="t-time">~10:00</div><div><div class="t-what">🚗 Mission Complete</div><div class="t-desc">Pack up, check out and head home with your lift club. Mission: Karoo complete. ✅</div></div></div>
         </div>
       </div>
     </div>
@@ -489,6 +567,8 @@
         <div class="venue-feats">
           <div class="f"><b>🍽️ Great food</b>Hugo's Restaurant, Benji's Bar &amp; Brasserie, and a special Boma evening.</div>
           <div class="f"><b>🤝 Exclusive access</b>Dedicated spaces for our group to meet and relax together.</div>
+          <div class="f"><b>📶 Wi-Fi</b>Available throughout Karoo1, including the accommodation, restaurant and tents.</div>
+          <div class="f"><b>☕ Arriving early?</b>You're welcome to grab a coffee and work from the restaurant/coffee shop before check-in.</div>
         </div>
         <a class="btn" href="https://www.karoo1.com/" target="_blank" rel="noopener">Visit karoo1.com →</a>
       </div>
@@ -576,6 +656,13 @@
             <li onclick="toggleItem(this)"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="4,13 9,18 20,6"/></svg></div><span class="txt">Extra swimming towel</span></li>
             <li onclick="toggleItem(this)"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="4,13 9,18 20,6"/></svg></div><span class="txt">Clothes you don't mind getting dusty or dirty</span></li>
           </ul>
+        </div>
+        <div class="pack-group">
+          <div class="pack-group-title">🎨 Team Colour</div>
+          <ul class="pack-list">
+            <li onclick="toggleItem(this)"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="4,13 9,18 20,6"/></svg></div><span class="txt">Something in your team colour for Thursday — 🔵 Blue, ⚪ White or 🟢 Green</span></li>
+          </ul>
+          <p style="font-size:13px; color:var(--grey-700); margin-top:8px;">A shirt, cap, bandana or accessory is fine — just make it visible for the Potjie Challenge.</p>
         </div>
         <div class="pack-group">
           <div class="pack-group-title">🏃 Joining the Morning Crew?</div>
